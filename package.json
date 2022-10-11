@@ -1,5 +1,5 @@
 {
-  "name": "example-project",
+  "name": "phase-4-project",
   "description": "Build scripts for Heroku",
   "engines": {
     "node": ">= 14"
