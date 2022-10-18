@@ -9,8 +9,7 @@ function Home({ setUser }) {
 
   return (
     <div>
-      <h1>ForTheMems</h1>
-      {/* <hr/> */}
+      <h1 className='navbar' >ForTheMems</h1>
       {showLogin ? (
         <div className="form-box">
           <LoginForm setUser={setUser} />
