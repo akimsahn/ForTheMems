@@ -4,14 +4,21 @@ import { NavLink } from 'react-router-dom';
 const linkStyle = {
   display: "inline-block",
   textAlign: "center",
-  fontSize: "14px",
-  width: "100px",
-  padding: "12px",
+  fontSize: "16px",
+  width: "150px",
+  padding: "15px 15px 12px 15px",
   color: "white",
   background: "rgb(147, 186, 209)",
-  marginRight: "10px",
-  marginLeft: "10px",
-  borderRadius: "15px 15px 0 0"
+  margin: "0 10px 0 10px",
+  borderRadius: "15px 15px 0 0",
+  textDecoration: "none",
+  boxShadow: "0 0 5px rgb(147, 186, 209)"
+}
+
+const activeStyle = {
+  background: "white",
+  color: "darkblue",
+  boxShadow: "none"
 }
 
 function NavBar({ user, setUser }) {
@@ -40,7 +47,7 @@ function NavBar({ user, setUser }) {
             to="/"
             exact
             style={linkStyle}
-            activeStyle={{ background: "darkblue", }}
+            activeStyle={activeStyle}
           >
             My Friends
           </NavLink>
@@ -48,7 +55,7 @@ function NavBar({ user, setUser }) {
             to="/all_memories"
             exact
             style={linkStyle}
-            activeStyle={{ background: "darkblue", }}
+            activeStyle={activeStyle}
           >
             My Memories
           </NavLink>
@@ -58,7 +65,7 @@ function NavBar({ user, setUser }) {
             to="/new_friend"
             exact
             style={linkStyle}
-            activeStyle={{ background: "darkblue", }}
+            activeStyle={activeStyle}
           >
             Add Friend
           </NavLink>
@@ -66,7 +73,7 @@ function NavBar({ user, setUser }) {
             to="/new_memory"
             exact
             style={linkStyle}
-            activeStyle={{ background: "darkblue", }}
+            activeStyle={activeStyle}
           >
             Add Memory
           </NavLink>

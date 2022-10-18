@@ -22,8 +22,8 @@ function MemoriesPage({ user, setErrors }) {
 
   return (
     <div>
-      {memories.length !== 0 ? (
-        <div className="card-container">
+      {memories.length > 0 ? (
+        <div className="memories-container">
           {memories.map(memory => <MemoryCard key={memory.id} user={user} memory={memory} onRemoveMemory={onRemoveMemory} />)}
         </div>
       ) : (

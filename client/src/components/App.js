@@ -28,7 +28,6 @@ function App() {
   return (
     <div>
       <NavBar user={user} setUser={setUser} />
-      <hr/>
       {errors === undefined ? null : (
         errors.map((err) => (
           <p className='error'>{err}</p>

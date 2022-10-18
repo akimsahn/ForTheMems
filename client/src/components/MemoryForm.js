@@ -101,64 +101,68 @@ function MemoryForm({ setErrors }) {
   return (
     <div>
       <form className='memory-form' onSubmit={handleMemorySubmit}>
-        <label>
-          Date: &nbsp;
-          <input
-            type='date'
-            name='date'
-            value={memoryData.date}
-            onChange={handleMemoryDataChange}
-          />
-        </label>
-        <label>
-          Image URL: &nbsp;
-          <input
-            type='text'
-            name='image_url'
-            value={memoryData.image_url}
-            onChange={handleMemoryDataChange}
-            placeholder='Enter URL'
-          />
-        </label>
-        <label>
-          Comment: &nbsp;
-          <input
-            type='text'
-            name='comment'
-            value={memoryData.comment}
-            onChange={handleMemoryDataChange}
-            placeholder='Add comment'
-          />
-        </label>
-        <hr/>
-        {friendData.map((friend, index) => (
-          <div key={index}>
-            <label>
-              Tag Friend: &nbsp;
-              <input
-                type='text'
-                name='friend_name'
-                value={friend.friend_name}
-                onChange={(e) => handleFriendDataChange(index, e)}
-                placeholder="Enter name or username"
-              />
-            </label>
-            <label>
-              &nbsp; Username entered? &nbsp;
-              <input
-                className='min-width'
-                type='checkbox'
-                name='friend_is_user'
-                value={friend.friend_is_user}
-                onChange={(e) => handleCheckbox(index, e)}
-              />
-            </label>
-            <button className='min-width' type='button' onClick={() => removeFriendField(index)}>X</button>
-          </div>
-        ))}
-        <button type='button' onClick={addFriendField}>Tag Another Friend</button>
-        <hr/>
-        <button type='submit'>Submit</button>
+        <div className='align-form-items'>
+          <label>
+            Date : &nbsp;
+            <input
+              type='date'
+              name='date'
+              value={memoryData.date}
+              onChange={handleMemoryDataChange}
+            />
+          </label>
+          <label>
+            Image URL : &nbsp;
+            <input
+              type='text'
+              name='image_url'
+              value={memoryData.image_url}
+              onChange={handleMemoryDataChange}
+              placeholder='Enter URL'
+            />
+          </label>
+          <label>
+            Comment : &nbsp;
+            <input
+              type='text'
+              name='comment'
+              value={memoryData.comment}
+              onChange={handleMemoryDataChange}
+              placeholder='Add comment'
+            />
+          </label>
+        </div>
+        <div className='centered'>
+          <hr/>
+          {friendData.map((friend, index) => (
+            <div key={index}>
+              <label>
+                Tag Friend : &nbsp;
+                <input
+                  type='text'
+                  name='friend_name'
+                  value={friend.friend_name}
+                  onChange={(e) => handleFriendDataChange(index, e)}
+                  placeholder="Enter name or username"
+                />
+              </label>
+              <label>
+                &nbsp; Username entered? &nbsp;
+                <input
+                  className='min-width'
+                  type='checkbox'
+                  name='friend_is_user'
+                  value={friend.friend_is_user}
+                  onChange={(e) => handleCheckbox(index, e)}
+                />
+              </label>
+              <button className='min-width' type='button' onClick={() => removeFriendField(index)}>X</button>
+            </div>
+          ))}
+          <button type='button' onClick={addFriendField}>Tag Another Friend</button>
+          <hr/>
+          <button type='submit'>Submit</button>
+        </div>
       </form>
     </div>
   )

@@ -10,7 +10,7 @@ function Home({ setUser }) {
   return (
     <div>
       <h1>ForTheMems</h1>
-      <hr/>
+      {/* <hr/> */}
       {showLogin ? (
         <div className="form-box">
           <LoginForm setUser={setUser} />

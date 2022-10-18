@@ -54,7 +54,7 @@ function FriendCard({ friend, onUpdateFriend, onRemoveFriend, setMemories, setEr
       <div className='card-info'>
         <h2>{full_name}</h2>
         <h4>Birthday: &nbsp; {birthday}</h4>
-        <h4>Last Hangout: &nbsp; {last_hang_out}</h4>
+        <h4>Last Hangout: &nbsp; {!last_hang_out ? "(None yet)" : last_hang_out}</h4>
         <form onSubmit={handleSubmit}>
           <label>Update hangout: &nbsp; </label>
           <input

@@ -1,18 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-body {
+body, html {
   margin: 0;
+  height: 100%;
   font-family: Montserrat;
 }
 
 button {
-  background: white;
+  background: rgb(147, 186, 209);
+  color: white;
   border: none;
   border-radius: 3px;
-  box-shadow: 0 0 3px rgb(10, 71, 94);
+  box-shadow: 0 0 2px rgb(10, 71, 94);
   font-family: Montserrat;
   margin: 10px;
-  padding: 2px 7px 2px 7px;
+  padding: 5px 12px 5px 12px;
+}
+
+button:hover {
+  cursor: pointer;
+  background: rgb(125, 166, 190);
 }
 
 .form-box {
@@ -23,9 +30,9 @@ button {
   display: flex;
   justify-content: space-evenly;
   width: 700px;
-  height: 220px;
-  padding: 30px 20px 30px 20px;
-  border-radius: 5px;
+  min-height: 250px;
+  padding: 50px 20px 50px 20px;
+  border-radius: 20px;
   box-shadow: 0 0 20px rgb(147, 186, 209);
 }
 
@@ -42,40 +49,40 @@ button {
 
 .friend-form {
   position: absolute;
-  top: 25%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, 0);
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
-  border-radius: 5px;
+  text-align: center;
+  padding: 40px;
+  border-radius: 20px;
   box-shadow: 0 0 20px rgb(147, 186, 209);
 }
 
-.friend-form input {
-  float: right;
+.align-form-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: fit-content;
 }
 
 .memory-form {
   position: absolute;
-  top: 25%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 550px;
+  width: 600px;
   display: flex;
   flex-direction: column;
-  padding: 30px;
-  border-radius: 5px;
+  align-items: center;
+  padding: 40px 20px;
+  border-radius: 20px;
   box-shadow: 0 0 20px rgb(147, 186, 209);
 }
 
-.links {
-  display: flex;
-  flex-direction: row;
-}
-
 .navbar {
-  height: 5rem;
+  width: 100%;
+  background-image: linear-gradient(rgb(147, 186, 209), white);
+  /* background-color: rgba(147, 186, 209, 0.473); */
 }
 
 .friends-page {
@@ -90,10 +97,11 @@ button {
   gap: 20px;
   overflow-y: scroll;
   padding: 20px;
-  max-height: 38.5rem;
+  height: 100%;
+  /* max-height: 38.5rem; */
 }
 
-.card-container {
+.memories-container {
   display: flex;
   flex-wrap: wrap;
   padding-top: 20px;
@@ -101,11 +109,12 @@ button {
 }
 
 .card {
-  border-radius: 5px;
-  box-shadow: 0 0 20px rgb(147, 186, 209);
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgb(147, 186, 209);
   margin: 0 auto;
   padding: 20px;
   width: 85%;
+  text-align: center;
 }
 
 .card img {
@@ -121,8 +130,8 @@ button {
   font-style: italic;
 }
 
-h2, h4, input, p {
-  margin: 0 0 10px 0;
+h2, h3, h4, input, p {
+  margin: 5px 0 5px 0;
 }
 
 .error {
@@ -138,14 +147,14 @@ h2, h4, input, p {
   transform: translate(-50%, -50%);
 }
 
-#right {
-  position: absolute;
-  right: 10px;
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-#left {
-  position: absolute;
-  left: 10px;
+#right, #left {
+  position: relative;
 }
 
 #logout-button {
@@ -154,11 +163,18 @@ h2, h4, input, p {
   right: 0px;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
+  margin: 5px 5px 0 0;
 }
 
-#logout-button h4, #logout-button button {
-  margin: 20px 20px 0 0;
+#logout-button button {
+  background-color: white;
+  color: rgb(10, 71, 94);
+  font-weight: bold;
+}
+
+button.min-width {
+  padding: 2px 5px;
 }
 
 .min-width {
@@ -166,16 +182,19 @@ h2, h4, input, p {
 }
 
 input {
-  padding: 2px;
+  padding: 3px;
   font-family: Montserrat;
   width: 200px;
 }
 
 h1 {
+  font-family: Satisfy;
+  font-size: 48px;
   text-align: center;
-  margin: 20px 0 0 0;
+  margin: 0;
+  padding-top: 10px;
 }
 
 hr {
-  margin: 0;
+  margin: 5px 0 5px 0;
 }
